@@ -26,7 +26,7 @@ header p {
 
 /* Hero Section */
 .hero-banner {
-    background: url('ranchi-cab-and-travel/images/hero-banner.jpg.jpg') no-repeat center center/cover;
+    background: url('https://raw.githubusercontent.com/abhi010-cell/ranchi-cab-and-travel/refs/heads/main/images/hero-banner.jpg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 20px 0;
