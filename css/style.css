@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    background-color: #dbd9d99c;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    color: #1f1f1ff5;
+    padding-top: 0px;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* book now Button Styles */
+.btn {
+    background: #079b78;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #00f947;
+}
+
+/* Section Styles */
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #48466d;
+    color: #fff;
+    text-align: center;
+    padding: -5px 0;
+}
+/* Enhanced Book Journey Form Styles */
+.booking-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.booking-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.booking-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+        row-gap: 10px;
+        column-gap: 50px;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+}
+
+.form-select {
+    height: 45px;
+    background-color: white;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+.form-note {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.required-field::after {
+    content: "*";
+    color: #dc3545;
+    margin-left: 4px;
+}
+/* Reviews Section */
+.reviews {
+    background: #f9f9f9;
+    padding: 20px 0;
+}
+
+.review {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+.review h3 {
+    margin: 0;
+    color: #28a745;
+}
+
+.review p {
+    margin: 5px 0 0;
+}
+
+/* book whatsapp buttons */
+.button-container {
+    text-align: center;
+    margin: 0px auto;
+
+    .book-taxi-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #038d90;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px;
+    }
+
+   
+
+    .whatsapp-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #1ab753;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .book-taxi-btn:hover {
+        background-color: #055051; /* Darker green */
+    }
+
+    .whatsapp-btn:hover {
+        background-color: #18692a; /* Darker green */
+    }
+
+}
+
+
+/* call button */
+.call_button-container {
+    text-align: center;
+    margin: 0px auto;
+
+.call_now {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #838282; 
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+    }
+    .call_now:hover {
+        background-color: #474545; /* Darker green */
+    }
+}
+    .flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.contact_container{
+    text-align: center;
+    margin: 0px auto;
+}

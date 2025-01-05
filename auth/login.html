@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3f4f6; /* bg-gray-100 */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Header section */
+        header {
+            background: url('file:///C:/Users/sahub/OneDrive/Desktop/travel_site_Organised/images/header-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            text-shadow: 2px 2px 5px #949494;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: #48466d;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .btn-blue {
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-blue:hover {
+            background-color: #2563eb;
+        }
+        
+       /* navigation section */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #46cdcf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   /* Added drop shadow */
+}
+    .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   /* Subtle inner shadow */
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    transition: transform 0.2s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+nav ul li:hover {
+    transform: translateY(-2px);
+}
+
+nav ul li a:hover {
+    background: #00f947;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Explore Jharkhand</h1>
+        <p>Your Trusted Travel Partner in Ranchi</p>
+    </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-container">
+                <ul> 
+                    <li>
+                    <a href="C:\Users\sahub\OneDrive\Desktop\travel_site_Organised\index.html" class="hover:underline">Home</a>
+                    </li>
+                <!-- Add more navigation links here if needed -->
+            </ul>
+            </div>
+        </nav>
+    <!-- Main Content -->
+    <div class="flex-1 flex items-center justify-center p-8">
+        <div class="bg-white p-8 rounded-lg shadow-md w-96">
+            <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700">Email/Username</label>
+                    <input type="email" id="email" required 
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Password</label>
+                    <input type="password" id="password" required 
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="submit" 
+                        class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
+                    Login
+                </button>
+            </form>
+            <p class="mt-4 text-center">
+                Don't have an account? <a href="signup.html" class="text-blue-500">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Explore Jharkhand. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('token', data.token);
+                    window.location.href = 'myaccount.html';
+                } else {
+                    alert('Login failed. Please check your credentials.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred during login.');
+            }
+        });
+    </script>
+</body>
+</html>

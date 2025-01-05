@@ -1,0 +1,38 @@
+/* Header Styles */
+header {
+   background: url('file:///C:/Users/sahub/OneDrive/Desktop/travel_site_Organised/images/header-bg.jpg') no-repeat center center/cover;
+  /*
+  background:#01567e;
+  */
+    color: #fff;    /* text color */
+    padding: 25px 0;
+    text-shadow: 2px 2px 5px #949494;
+    text-align: center;
+    position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0.2px 0 0;
+}
+
+/* Hero Section */
+.hero-banner {
+    background: url('file:///C:/Users/sahub/OneDrive/Desktop/travel_site_Organised/images/hero-banner.jpg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-banner h2 {
+    font-size: 3em;
+}

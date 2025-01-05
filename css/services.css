@@ -1,0 +1,81 @@
+/* Services Section Styles */
+#services {
+    background: #f8f9faa2;
+    padding: 40px 0;
+}
+
+#services h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.service-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    color: #333;
+    margin: 15px 0;
+    font-size: 1.4em;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+/*          animation for images in "Safe and Comfortable Vehicles Modern" section
+
+.image-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-carousel img.active {
+    opacity: 1;
+}
